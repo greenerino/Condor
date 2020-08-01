@@ -1,5 +1,11 @@
 extends KinematicBody2D
 
+# Improvements:
+# Constant vars below can use the const keyword.
+# $References should be assigned to variables. This allows the reference to the node's path
+#	within the code to only exist in one place. If the scene's structure changes, it makes
+#	it easy to update.
+
 var direction = Vector2()
 var alive = false
 var score = 0
@@ -9,7 +15,7 @@ var MAX_RISE = 2000
 var DROP = 1000
 var MAX_DROP = 3000
 var RUN = 400
-# var INITIAL_POS = Vector2(8363, 188)
+# var DEBUG_POS = Vector2(8363, 188)
 var INITIAL_POS = Vector2(350, 515)
 
 func _ready():
